@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Car Parking Management System</title>
+	<style>
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 20px;
+		}
+
+		label {
+			font-weight: bold;
+			margin-bottom: 5px;
+			color: #444;
+		}
+
+		input[type="text"], input[type="date"], input[type="time"] {
+			padding: 8px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+			margin-bottom: 10px;
+			width: 100%;
+			max-width: 500px;
+			color: #666;
+		}
+
+		input[type="submit"] {
+			background-color: #007bff;
+			color: #fff;
+			padding: 10px 20px;
+			border-radius: 5px;
+			border: none;
+			font-weight: bold;
+			cursor: pointer;
+			transition: background-color 0.2s ease;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #0062cc;
+		}
+	</style>
+</head>
+<body>
+	<center>
+	<h1>Vehicle Parking Management System</h1>
+</center>
+	<form>
+		<label for="date">Date:</label>
+		<input type="date" id="date" name="date">
+
+		<label for="carnumber">Car Number:</label>
+		<input type="text" id="carnumber" name="carnumber" placeholder="Enter car number">
+
+		<label for="entrytime">Entry Time:</label>
+		<input type="time" id="entrytime" name="entrytime">
+
+		<label for="allotedspace">Alloted Space:</label>
+		<input type="text" id="allotedspace" name="allotedspace" placeholder="Enter alloted space">
+
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

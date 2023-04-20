@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Login - Vehicle Parking Management System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f2f2f2;
+      }
+
+      .login-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid #ccc;
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .login-container h1 {
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+
+      input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h1>Vehicle Parking Management System</h1>
+      <form action="/admin/login" method="POST">
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+
+        <button type="submit"> <a href="http://127.0.0.1:5555/1.html"></a>Login</button>
+      </form>
+    </div>
+  </body>
+</html>

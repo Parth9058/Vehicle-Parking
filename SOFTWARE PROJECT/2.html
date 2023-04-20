@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parking Space</title>
+	<style>
+	  form {
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	  }
+	  
+	  label {
+	    font-size: 18px;
+	    margin-bottom: 10px;
+	  }
+	  
+	  input[type="text"] {
+	    padding: 10px;
+	    font-size: 16px;
+	    border-radius: 5px;
+	    border: 1px solid #ccc;
+	  }
+	  
+	  button[type="submit"] {
+	    padding: 10px 20px;
+	    font-size: 16px;
+	    border-radius: 5px;
+	    background-color: #4CAF50;
+	    color: #fff;
+	    border: none;
+	    cursor: pointer;
+	  }
+	  
+	  button[type="submit"]:hover {
+	    background-color: #3e8e41;
+	  }
+	  
+	  /* Pop-up message */
+	  .popup {
+	    position: fixed;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+	    padding: 20px;
+	    background-color: #fff;
+	    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	  }
+	  
+	  .popup__title {
+	    font-size: 24px;
+	    font-weight: bold;
+	    margin-bottom: 10px;
+	  }
+	  
+	  .popup__message {
+	    font-size: 18px;
+	    margin-bottom: 10px;
+	  }
+	  
+	  .popup__close {
+	    position: absolute;
+	    top: 10px;
+	    right: 10px;
+	    font-size: 18px;
+	    font-weight: bold;
+	    cursor: pointer;
+	  }
+	</style>
+</head>
+<body>
+	<form>
+		<label for="car-number">Car Number:</label>
+		<input type="text" id="car-number" name="car-number"><br><br>
+		<button type="submit">Submit</button>
+	</form>
+
+	<script>
+	  const form = document.querySelector('form');
+	  form.addEventListener('submit', (event) => {
+	    event.preventDefault(); // prevent form submission
+	    const carNumber = document.getElementById('car-number').value;
+	    const parkingSpace = getParkingSpace(carNumber); // call a function to get the parking space based on the car number
+	    alert(`Your parking space is ${parkingSpace}`); // display a pop-up message with the parking space
+	  });
+	</script>
+</body>
+</html>
